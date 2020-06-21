@@ -1,0 +1,54 @@
+﻿<div class="top-nav">
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="media_links_container">
+        <a target="_blank" href="https://www.facebook.com/ZSATeSportsLeague/" title="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCpRNFNN5fWhEQUK1B7wG5BA?view_as=subscriber&fbclid=IwAR0C1OaQlLC48DcdmSHG0UWxCK4FBQCvQQ3uRIrx1V_aBRAvKP6CfverVNg" title="youtube"><i class="fab fa-youtube"></i></a>
+        <a target="_blank" href="https://www.instagram.com/ezsat.pl/" title="instagram"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://discord.gg/VUhTd2k" title="discord"><i class="fab fa-discord"></i></a>
+        <a target="_blank" href="https://www.twitch.tv/ezsat" title="twitch"><i class="fab fa-twitch"></i></a>
+    </div>
+</div>
+
+
+<div class="@NavMenuCssClass">
+
+    <button class="navbar-toggler-in" @onclick="ToggleNavMenu">
+        <i class="fa fa-times-circle"></i>
+    </button>
+
+    <nav class="navbar">
+        <ul class="nav-content">
+            <li>
+                <NavLink class="nav-link" href="/" @onclick="ToggleNavMenu">
+                    <i class="fa fa-dragon"></i> Strona Główna
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="Aktualnosci" @onclick="ToggleNavMenu">
+                    <i class="fa fa-dungeon"></i> Aktualności
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="Informacje" @onclick="ToggleNavMenu">
+                    <i class="fa fa-question-circle"></i> Informacje
+                </NavLink>
+            </li>
+
+        </ul>
+    </nav>
+
+</div>
+
+@code {
+    bool collapseNavMenu = true;
+
+    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

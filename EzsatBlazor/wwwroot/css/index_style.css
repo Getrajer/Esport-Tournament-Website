@@ -1,0 +1,765 @@
+﻿
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #F3FCF2;
+    overflow-x: hidden;
+
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../resources/main_background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    padding: 0;
+  }
+}
+
+.col-md-4{
+    padding:0;
+    margin:0;
+}
+
+.col-md-8 {
+    padding: 0;
+    margin: 0;
+}
+
+.stream_container{
+    margin-top: 3em;
+}
+
+.stream_frame {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+}
+
+.chat_frame {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+}
+
+#aktualnosci-header {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(8, 3, 5, 0.88);
+  color: #F3FCF2;
+}
+
+
+
+
+
+#aktualnosci-header .header-content {
+  font-size: 3rem;
+  width: 100%;
+  color: #F3FCF2;
+}
+
+#aktualnosci-header .header-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.3em;
+  letter-spacing: 4px;
+  font-weight: 900;
+  width: 100%;
+}
+
+#aktualnosci-header .header-content .join_button {
+  font-size: 2rem;
+  width: 100%;
+  margin-top: 2em;
+}
+
+#aktualnosci-header .header-content .join_button a {
+  background-color: #F3FCF2;
+  text-decoration: none;
+  color: #080305;
+  padding: 0.5em;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+#aktualnosci-header .header-content .join_button a:hover {
+  background-color: #20FC20;
+  color:#080305;
+}
+
+#aktualnosci-header .header-content .join_button:hover::after{
+  content:"Dowiedz się więcej!";
+  position: absolute;
+  margin-left: 3em;
+  text-transform: uppercase;
+  color: #20FC20;
+  transition: all 0.5s ease;
+}
+
+#sponsorzy {
+    background-color: rgb(8, 3, 5);
+    height: 10em;
+}
+
+
+
+#sponsorzy a {
+    cursor: pointer;
+    margin-right: 0.8em;
+}
+
+#sponsorzy a img{
+    max-width:100%;
+    max-width: 7em;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+#sponsorzy a img:hover {
+   background-color: rgba(32, 252, 32, 0.23);
+   border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 1400px) {
+    #sponsorzy a {
+        cursor: pointer;
+        margin-right: 0.4em;
+    }
+
+    #sponsorzy a img{
+    max-width:100%;
+    max-width: 4em;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #sponsorzy a {
+        cursor: pointer;
+        margin-right: 0.2em;
+    }
+
+    #sponsorzy a img{
+    max-width:100%;
+    max-width: 3em;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+    .container .header-content h1 {
+        font-size: 2rem;
+    }
+}
+
+
+.heading-underline-container {
+    width: 100%;
+    padding: 0 30%;
+}
+
+
+.heading-underline-container .underline{
+    height:0.1em;
+    width:100%;
+    background-color:#00a100;
+}
+
+
+
+#twitch {
+    margin-top: 6em;
+    min-height: 20em;
+}
+
+#stream{
+    min-height:30em;
+}
+#stream .stream {
+    height:100%;
+    width: 100%;
+}
+
+
+#chat {
+    min-height: 10em;
+}
+
+#chat .chat {
+    min-height: 30em;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #chat {
+        min-height: 20em;
+        margin-top: 2em;
+    }
+
+    #chat .chat{
+    min-height: 20em;
+}
+}
+
+.title {
+  margin-bottom: 2em;
+}
+
+.title .title-txt {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+.title .heading-underline {
+  height: 0.2em;
+  width: 40%;
+  margin: 0 30%;
+  background-color:  #00a100;
+}
+
+
+#briefing {
+    margin-top: 10%;
+    padding: 2em 0;
+    background-color: rgba(8, 3, 5, 0.89);
+}
+
+#briefing .row{
+    padding: 1em;
+    height: 100%;
+    margin:0;
+}
+
+#briefing .heading-underline{
+    height: 0.1em;
+    width: 100%;
+    background-color:  #00a100;
+}
+
+#briefing .bold{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#briefing .title {
+    margin: 6em 0 2em 0;
+}
+
+#briefing .title .title-txt {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+#briefing .title .heading-underline {
+  height: 0.2em;
+  width: 40%;
+  margin: 0 30%;
+  background-color: #080305;
+}
+
+
+.box {
+    height: 100%;
+    width: 100%;
+}
+
+#briefing .brief_img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#briefing .container-img {
+}
+
+#briefing .container-txt {
+    padding: 2em 4em;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1600px) {
+    #briefing .container-txt {
+        padding: 2em 1em;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    #briefing .brief_img {
+        min-width:100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1400px) {
+    #briefing .container-txt {
+        padding: 1em 1em;
+        font-size: 1rem;
+        letter-spacing: 1px;
+
+    }
+
+    #briefing .brief_img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #briefing .row .box .container-img img {
+        width: 100%;
+    }
+
+    #briefing{
+        text-align:center;
+    }
+}
+
+
+
+#aktualnosci {
+    padding: 1em;
+    margin: 5em 0 8em 0;
+}
+
+#aktualnosci .title {
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#aktualnosci .title .title-txt {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+#aktualnosci .title .heading-underline {
+  height: 0.2em;
+  width: 40%;
+  margin: 0 30%;
+  background-color:  #00a100;
+}
+
+#aktualnosci .card {
+  min-height: 55em;
+  max-height: 60em;
+  padding: 0 1em;
+  margin: 0.5em 0.5em;
+  color: #F3FCF2;
+  background-color: rgba(8, 3, 5, 0.89);
+  transition: 0.5s;
+}
+
+#aktualnosci .card:hover {
+  transform: translateY(-15px);
+}
+
+#aktualnosci .card .card-title {
+  margin: 1em 0 .3em 0;
+  color: #FF009D;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#aktualnosci .card .card-text {
+  padding: 0.4em 0;
+  font-size: 1rem;
+  font-weight: 200;
+  max-height: 14em;
+  overflow: hidden;
+}
+
+#aktualnosci .card .post-img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1em;
+}
+
+#aktualnosci .card .date {
+  color: #FF009D;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.col-xl-4{
+    padding:0;
+    margin:0;
+}
+
+#aktualnosci .card .date::before {
+    content: 'Opublikowano: ';
+}
+
+    #aktualnosci .card .author {
+        color: #FF009D;
+        font-weight: 500;
+    }
+
+    #aktualnosci .card .author::before {
+        content: 'Autor: ';
+    }
+
+    #aktualnosci .card .btn {
+        background-color: #FF009D;
+        outline: none;
+        border: none;
+        float: right;
+        display:block;
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+    }
+
+
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#aktualnosci .card .btn {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#aktualnosci .card .btn:hover {
+    background-color: #00a100;
+    -webkit-box-shadow: 0 0 3px 2px #20FC20;
+    box-shadow: 0 0 3px 2px #00a100;
+}
+
+#cos {
+  color: #F3FCF2;
+  background-color: #3a0a44;
+}
+
+.img-thumbnail-aktualnosci {
+    text-align: center;
+    min-height:20em;
+}
+
+.img-thumbnail-aktualnosci img {
+    max-width: 100%;
+    max-height:20em;
+}
+
+@media only screen and (max-width: 1400px) {
+    #aktualnosci{
+        padding:0;
+    }
+
+    #aktualnosci .card {
+        padding: 0;
+        margin: 0.5em 0;
+}
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    #aktualnosci {
+        padding: 1em 3.5em;
+        margin: 5em 1.9em 8em 1.9em;
+    }
+
+    #aktualnosci .card {
+        margin-bottom: 3em;
+        padding: 0.5em 1.8em;
+        min-height: 50em;
+
+    }
+    .img-thumbnail-aktualnosci {
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .img-thumbnail-aktualnosci{
+    }
+
+    .img-thumbnail-aktualnosci {
+        text-align: center;
+        width: 100%;
+        min-height: 0;
+    }
+
+    .img-thumbnail-aktualnosci img {
+        max-width: 100%;
+        max-height:20em;
+}
+
+    #aktualnosci-header .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    #aktualnosci-header .header-content .join_button {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-top: 2em;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    #aktualnosci {
+    padding: 0.3em;
+    margin: 5em 0 8em 0;
+  }
+  #aktualnosci .title {
+    margin-bottom: 2em;
+  }
+  #aktualnosci .title .title-txt {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    font-weight: 900;
+  }
+  #aktualnosci .title .heading-underline {
+    height: 0.2em;
+    width: 40%;
+    margin: 0 30%;
+    background-color:  #00a100;
+  }
+  #aktualnosci .card {
+    min-height: 45em;
+    max-height: 50em;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+}
+
+
+
+#turnieje {
+    margin-bottom: 7em;
+    width: 100%;
+}
+.row{
+    padding:0;
+    margin: 0;
+}
+
+.col-md-6{
+    padding: 0;
+    margin: 0;
+}
+
+#turnieje .title {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#turnieje .title .title-txt {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+#turnieje .title .heading-underline {
+  height: 0.2em;
+  width: 40%;
+  margin: 0 30%;
+  background-color:  #00a100;
+}
+
+#turnieje .leauge, #turnieje .cs {
+  height: 40vh;
+  width: auto;
+}
+
+#turnieje h3 {
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+#turnieje .turniej-link {
+  height: 100%;
+  width: 100%;
+  font-size: 4rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  color: #F3FCF2;
+}
+
+
+
+#turnieje .turniej-bacground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#turnieje #lol-turniej {
+  background-image: url(../../resources/League-of-Legends-bacground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#turnieje #cs-turniej {
+  background-image: url(../../resources/CS-GO-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#turnieje #tft {
+    background-image: url(../resources/tft2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#turnieje #roureta {
+    background-image: url(../resources/jinx.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#turnieje .turniej-content {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 2em;
+  background-color: rgba(255, 0, 157, 0.28);
+  opacity: 0;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+#turnieje .turniej-content:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0 0 10px 4px rgba(187, 2, 116, 0.80);
+          box-shadow: 0 0 10px 4px rgba(187, 2, 116, 0.80);
+}
+
+@media screen and (max-width: 1200px) {
+    #turnieje .turniej-link {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0;
+    }
+
+    #turnieje .title .title-txt {
+        font-size: 2rem;
+    }
+
+    #aktualnosci .title .title-txt {
+        font-size: 2rem;
+    }
+    #aktualnosci .card {
+        min-height: 50em;
+        max-height: 50em;
+    }
+
+
+}
+
+
+/* End of contact form */
+#location {
+  margin: 2em 0 6em 0;
+  width: 100%;
+}
+
+#location .title {
+ margin-bottom: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#location .title .title-txt {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+#location .title .heading-underline {
+  height: 0.2em;
+  width: 40%;
+  margin: 0 30%;
+  background-color: #00a100;
+}
+
+#location .map-container {
+  border-left: 3em solid #080305;
+  border-right: 3em solid #080305;
+  border-top: 1em solid #080305;
+  border-bottom: 1em solid #080305;
+  -webkit-transition: 0.6s all ease;
+  transition: 0.6s all ease;
+}
+
+#location .map-container:hover {
+  -webkit-box-shadow: 0 0 15px 8px #080305;
+          box-shadow: 0 0 15px 8px #080305;
+}
+
+#location .map-container iframe {
+  width: 600px;
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  #location .map-container {
+    border-left: 1em solid #080305;
+    border-right: 1em solid #080305;
+    border-top: 1em solid #080305;
+    border-bottom: 1em solid #080305;
+    max-width: 400px;
+  }
+  #location iframe {
+    max-width: 300px;
+    height: 350px;
+  }
+}
+/*# sourceMappingURL=index-style.css.map */
